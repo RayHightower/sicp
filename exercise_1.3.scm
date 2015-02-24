@@ -1,2 +1,2 @@
 (define (sum_of_squares a b c)
-  (if:q (a < b) 
+  (cond (and (< a b) (< a c)) (+ (* b b) (* c c))
