@@ -1,2 +1,5 @@
-(define (sum_of_squares a b c)
+(define (sum_squares_of_two_larger a b c)
   (cond (and (< a b) (< a c)) (+ (* b b) (* c c))
+  (cond (and (< b a) (< b c)) (+ (* a a) (* c c))
+  (cond (and (< c a) (< c b)) (+ (* a a) (* b b))
+        ))))
