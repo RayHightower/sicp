@@ -15,13 +15,23 @@
 (define (improve guess x)
   (average guess (/ x guess)))
 
+; What does good-enough mean?
+(define (good-enough? guess x)
+  (< (abs (- (square guess) x)) 0.001))
+
 ; Try new-if with Newton's square root algorithm.
+; (define (sqrt-iter guess x)
+;   (new-if (good-enough? guess x)
+;           guess
+;           (sqrt-iter (improve guess x) x)))
+
+; Try regular-if with Newton's square root algorithm.
 (define (sqrt-iter guess x)
-  (new-if (good-enough? guess x)
+  (if (good-enough? guess x)
           guess
           (sqrt-iter (improve guess x) x)))
 
-(sqrt-iter 5 10)
+(sqrt-iter 2 10)
 
 (sqrt-iter 3 16)
 
