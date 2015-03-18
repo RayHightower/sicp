@@ -1,3 +1,5 @@
+; if recursion is the last thing we do in the call, then we're doing tail recursion.
+
 (define (exp b n)
   (exp-iter b n 1))
 
