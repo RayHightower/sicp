@@ -5,7 +5,7 @@
     (+ a
        (sum-int (+ a 1) b))))
 
-(sum-int 2 3)
+(sum-int 2 9)
 
 (define (square num)
   (* num num))
