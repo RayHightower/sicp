@@ -20,10 +20,10 @@
   (< (abs (- (square guess) x)) 0.001))
 
 ; Try new-if with Newton's square root algorithm.
-; (define (sqrt-iter guess x)
-;   (new-if (good-enough? guess x)
-;           guess
-;           (sqrt-iter (improve guess x) x)))
+(define (sqrt-iter-2 guess x)
+  (new-if (good-enough? guess x)
+          guess
+          (sqrt-iter (improve guess x) x)))
 
 ; Try regular-if with Newton's square root algorithm.
 (define (sqrt-iter guess x)
@@ -36,4 +36,11 @@
 (sqrt-iter 3 16)
 
 (sqrt-iter 20 999)
+
+
+(sqrt-iter-2 2 10)
+
+(sqrt-iter-2 3 16)
+
+(sqrt-iter-2 20 999)
 
