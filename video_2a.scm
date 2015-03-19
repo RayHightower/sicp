@@ -1,3 +1,4 @@
+; find the sum of integers from a to b, inclusive
 (define (sum-int a b)
   (if (> a b)
     0
