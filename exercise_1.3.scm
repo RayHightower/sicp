@@ -25,3 +25,6 @@ c
 (sum_squares_of_two_larger 10 2 40)
 
 
+(sum_squares_of_two_larger 3400 36 22)
+
+(sum_squares_of_two_larger 64 36 49)
